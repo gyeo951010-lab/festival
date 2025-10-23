@@ -204,14 +204,15 @@ body {
 }
 
 .btn-primary {
-    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
-    color: white;
-    box-shadow: 0 4px 20px rgba(255, 107, 107, 0.3);
+    /* 버튼도 옐로우 계열 그라디언트로 변경 */
+    background: linear-gradient(45deg, #fff0b0 0%, #ffc65a 50%, #ffaa11 100%);
+    color: #222; /* 텍스트 가독성 확보 */
+    box-shadow: 0 4px 20px rgba(255,170,17,0.22);
+    transition: transform .18s ease, box-shadow .18s ease;
 }
-
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(255, 107, 107, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(255,170,17,0.28);
 }
 
 .btn-secondary {
@@ -491,12 +492,14 @@ section {
 
 .program-image {
     height: 120px;
-    background: linear-gradient(45deg, #667eea, #764ba2);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     font-size: 3rem;
+    /* 파스텔 옐로우 -> 끝 색상으로 #ffaa11 사용 */
+    background: linear-gradient(45deg, #fff4b3 0%, #ffd57a 60%, #ffaa11 100%);
+    color: #2b1f00; /* 가독성 좋은 다크 브라운 */
+    border-radius: 12px;
 }
 
 .program-info {
