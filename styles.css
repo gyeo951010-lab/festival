@@ -204,15 +204,36 @@ body {
 }
 
 .btn-primary {
-    /* 버튼도 옐로우 계열 그라디언트로 변경 */
-    background: linear-gradient(45deg, #fff0b0 0%, #ffc65a 50%, #ffaa11 100%);
-    color: #222; /* 텍스트 가독성 확보 */
-    box-shadow: 0 4px 20px rgba(255,170,17,0.22);
+    /* 참여신청 .info-card와 유사한 '색 없음 / 흰 배경 + 테두리 + 상단 그라디언트 바' 스타일 */
+    background: #fff;
+    color: #333;
+    border: 2px solid rgba(102,126,234,0.12);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    border-radius: 50px;
+    padding: 1rem 2rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
     transition: transform .18s ease, box-shadow .18s ease;
 }
+
+/* 상단 그라디언트 바 (info-card ::before와 동일한 톤) */
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+/* hover 효과 */
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 30px rgba(255,170,17,0.28);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.12);
 }
 
 .btn-secondary {
